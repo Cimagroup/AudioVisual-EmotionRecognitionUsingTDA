@@ -4,7 +4,6 @@
 %%% with 9 frames
 
 function complex_filtration(delaunay)
-%function [Filters_complex_eight_full]= complex_filtration(delaunay)
 pathname= 'C:\EmotionalRecognition\Partes\face\Complejos\Complejos';
 pathname_index= 'C:\EmotionalRecognition\Partes\face\Index\Index';
 Complex_eight_full=[];
@@ -33,8 +32,6 @@ delaunay_test=[];
       edges=zeros(3*length(Edges_test{1}),2*length(Edges_test));
 
  
-
-
       for i=1:length(Edges_test)
         for j=1:length(Edges_test{i})
     
@@ -45,9 +42,6 @@ delaunay_test=[];
      edges(:,2*i)= edges(:,2)+68*(i-1);  
       end
 
-
-
-
              vertex= zeros(length( Vertex_test{1}),2*length( Vertex_test));
          for i=1:length(Vertex_test)
             for j=1:length(Vertex_test{i})
@@ -56,7 +50,6 @@ delaunay_test=[];
             end
      
          end
-
 
         Vertices= zeros(size(vertex,1)*size(delaunay{h},2),2);
         A = vertex(:,1:2:end); %odd matrix 
@@ -98,31 +91,6 @@ delaunay_test=[];
     end
 
 
-%     for i=1:length(filters.complejoX)
-%       Filters_complex{1}{i}={[filters.complejoX(i,1)], [filters.complejoX(i,2)], [filters.complejoX(i,3)],  [filters.complejoX(i,1) filters.complejoX(i,2)],[filters.complejoX(i,1) filters.complejoX(i,3)],[filters.complejoX(i,2) filters.complejoX(i,3)], [filters.complejoX(i,1) filters.complejoX(i,2) filters.complejoX(i,3)], [filters.complejoX(i,4)], [filters.complejoX(i,2) filters.complejoX(i,4)],[filters.complejoX(i,3) filters.complejoX(i,4)],[filters.complejoX(i,2) filters.complejoX(i,3) filters.complejoX(i,4)]};
-%       Filters_complex{2}{i}={[filters.complejoY(i,1)], [filters.complejoY(i,2)], [filters.complejoY(i,3)],  [filters.complejoY(i,1) filters.complejoY(i,2)],[filters.complejoY(i,1) filters.complejoY(i,3)],[filters.complejoY(i,2) filters.complejoY(i,3)], [filters.complejoY(i,1) filters.complejoY(i,2) filters.complejoY(i,3)], [filters.complejoY(i,4)], [filters.complejoY(i,2) filters.complejoY(i,4)],[filters.complejoY(i,3) filters.complejoY(i,4)],[filters.complejoY(i,2) filters.complejoY(i,3) filters.complejoY(i,4)]};
-%       Filters_complex{3}{i}={[filters.complejoXY(i,1)], [filters.complejoXY(i,2)], [filters.complejoXY(i,3)],  [filters.complejoXY(i,1) filters.complejoXY(i,2)],[filters.complejoXY(i,1) filters.complejoXY(i,3)],[filters.complejoXY(i,2) filters.complejoXY(i,3)], [filters.complejoXY(i,1) filters.complejoXY(i,2) filters.complejoXY(i,3)], [filters.complejoXY(i,4)], [filters.complejoXY(i,2) filters.complejoXY(i,4)],[filters.complejoXY(i,3) filters.complejoXY(i,4)],[filters.complejoXY(i,2) filters.complejoXY(i,3) filters.complejoXY(i,4)]};
-%       Filters_complex{4}{i}={[filters.complejoYX(i,1)], [filters.complejoYX(i,2)], [filters.complejoYX(i,3)],  [filters.complejoYX(i,1) filters.complejoYX(i,2)],[filters.complejoYX(i,1) filters.complejoYX(i,3)],[filters.complejoYX(i,2) filters.complejoYX(i,3)], [filters.complejoYX(i,1) filters.complejoYX(i,2) filters.complejoYX(i,3)], [filters.complejoYX(i,4)], [filters.complejoYX(i,2) filters.complejoYX(i,4)],[filters.complejoYX(i,3) filters.complejoYX(i,4)],[filters.complejoYX(i,2) filters.complejoYX(i,3) filters.complejoYX(i,4)]};
-%       Filters_complex{5}{i}={[filters.complejoX_inv(i,1)], [filters.complejoX_inv(i,2)], [filters.complejoX_inv(i,3)],  [filters.complejoX_inv(i,1) filters.complejoX_inv(i,2)],[filters.complejoX_inv(i,1) filters.complejoX_inv(i,3)],[filters.complejoX_inv(i,2) filters.complejoX_inv(i,3)], [filters.complejoX_inv(i,1) filters.complejoX_inv(i,2) filters.complejoX_inv(i,3)], [filters.complejoX_inv(i,4)], [filters.complejoX_inv(i,2) filters.complejoX_inv(i,4)],[filters.complejoX_inv(i,3) filters.complejoX_inv(i,4)],[filters.complejoX_inv(i,2) filters.complejoX_inv(i,3) filters.complejoX_inv(i,4)]};
-%       Filters_complex{6}{i}={[filters.complejoY_inv(i,1)], [filters.complejoY_inv(i,2)], [filters.complejoY_inv(i,3)],  [filters.complejoY_inv(i,1) filters.complejoY_inv(i,2)],[filters.complejoY_inv(i,1) filters.complejoY_inv(i,3)],[filters.complejoY_inv(i,2) filters.complejoY_inv(i,3)], [filters.complejoY_inv(i,1) filters.complejoY_inv(i,2) filters.complejoY_inv(i,3)], [filters.complejoY_inv(i,4)], [filters.complejoY_inv(i,2) filters.complejoY_inv(i,4)],[filters.complejoY_inv(i,3) filters.complejoY_inv(i,4)],[filters.complejoY_inv(i,2) filters.complejoY_inv(i,3) filters.complejoY_inv(i,4)]};
-%       Filters_complex{7}{i}={[filters.complejoXY_inv(i,1)], [filters.complejoXY_inv(i,2)], [filters.complejoXY_inv(i,3)],  [filters.complejoXY_inv(i,1) filters.complejoXY_inv(i,2)],[filters.complejoXY_inv(i,1) filters.complejoXY_inv(i,3)],[filters.complejoXY_inv(i,2) filters.complejoXY_inv(i,3)], [filters.complejoXY_inv(i,1) filters.complejoXY_inv(i,2) filters.complejoXY_inv(i,3)], [filters.complejoXY_inv(i,4)], [filters.complejoXY_inv(i,2) filters.complejoXY_inv(i,4)],[filters.complejoXY_inv(i,3) filters.complejoXY_inv(i,4)],[filters.complejoXY_inv(i,2) filters.complejoXY_inv(i,3) filters.complejoXY_inv(i,4)]};
-%       Filters_complex{8}{i}={[filters.complejoYX_inv(i,1)], [filters.complejoYX_inv(i,2)], [filters.complejoYX_inv(i,3)],  [filters.complejoYX_inv(i,1) filters.complejoYX_inv(i,2)],[filters.complejoYX_inv(i,1) filters.complejoYX_inv(i,3)],[filters.complejoYX_inv(i,2) filters.complejoYX_inv(i,3)], [filters.complejoYX_inv(i,1) filters.complejoYX_inv(i,2) filters.complejoYX_inv(i,3)], [filters.complejoYX_inv(i,4)], [filters.complejoYX_inv(i,2) filters.complejoYX_inv(i,4)],[filters.complejoYX_inv(i,3) filters.complejoYX_inv(i,4)],[filters.complejoYX_inv(i,2) filters.complejoYX_inv(i,3) filters.complejoYX_inv(i,4)]};
-% 
-%     end
-
-%       Filters_complex{2}{i}={[filters.complejoY(i,1)], [filters.complejoY(i,2)], [filters.complejoY(i,3)], [filters.complejoY(i,4)], [filters.complejoY(i,1) filters.complejoY(i,2)],  [filters.complejoY(i,3) filters.complejoY(i,4)],[filters.complejoY(i,1) filters.complejoY(i,3)],[filters.complejoY(i,2) filters.complejoY(i,4)], [filters.complejoY(i,2) filters.complejoY(i,3)], [filters.complejoY(i,1) filters.complejoY(i,2) filters.complejoY(i,3)],[filters.complejoY(i,2) filters.complejoY(i,3) filters.complejoY(i,4)]};
-%       Filters_complex{3}{i}={[filters.complejoXY(i,1)], [filters.complejoXY(i,2)], [filters.complejoXY(i,3)], [filters.complejoXY(i,4)], [filters.complejoXY(i,1) filters.complejoXY(i,2)],  [filters.complejoXY(i,3) filters.complejoXY(i,4)],[filters.complejoXY(i,1) filters.complejoXY(i,3)],[filters.complejoXY(i,2) filters.complejoXY(i,4)],[filters.complejoXY(i,2) filters.complejoXY(i,3)], [filters.complejoXY(i,1) filters.complejoXY(i,2) filters.complejoXY(i,3)],[filters.complejoXY(i,2) filters.complejoXY(i,3) filters.complejoXY(i,4)]};
-%       Filters_complex{4}{i}={[filters.complejoYX(i,1)], [filters.complejoYX(i,2)], [filters.complejoYX(i,3)], [filters.complejoYX(i,4)], [filters.complejoYX(i,1) filters.complejoYX(i,2)],  [filters.complejoYX(i,3) filters.complejoYX(i,4)],[filters.complejoYX(i,1) filters.complejoYX(i,3)],[filters.complejoYX(i,2) filters.complejoYX(i,4)],[filters.complejoYX(i,2) filters.complejoYX(i,3)], [filters.complejoYX(i,1) filters.complejoYX(i,2) filters.complejoYX(i,3)],[filters.complejoYX(i,2) filters.complejoYX(i,3) filters.complejoYX(i,4)]};
-%       Filters_complex{5}{i}={[filters.complejoX_inv(i,1)], [filters.complejoX_inv(i,2)], [filters.complejoX_inv(i,3)], [filters.complejoX_inv(i,4)], [filters.complejoX_inv(i,1) filters.complejoX_inv(i,2)],  [filters.complejoX_inv(i,3) filters.complejoX_inv(i,4)],[filters.complejoX_inv(i,1) filters.complejoX_inv(i,3)],[filters.complejoX_inv(i,2) filters.complejoX_inv(i,4)],[filters.complejoX_inv(i,2) filters.complejoX_inv(i,3)], [filters.complejoX_inv(i,1) filters.complejoX_inv(i,2) filters.complejoX_inv(i,3)],[filters.complejoX_inv(i,2) filters.complejoX_inv(i,3) filters.complejoX_inv(i,4)]};
-%       Filters_complex{6}{i}={[filters.complejoY_inv(i,1)], [filters.complejoY_inv(i,2)], [filters.complejoY_inv(i,3)], [filters.complejoY_inv(i,4)], [filters.complejoY_inv(i,1) filters.complejoY_inv(i,2)],  [filters.complejoY_inv(i,3) filters.complejoY_inv(i,4)],[filters.complejoY_inv(i,1) filters.complejoY_inv(i,3)],[filters.complejoY_inv(i,2) filters.complejoY_inv(i,4)],[filters.complejoY_inv(i,2) filters.complejoY_inv(i,3)], [filters.complejoY_inv(i,1) filters.complejoY_inv(i,2) filters.complejoY_inv(i,3)],[filters.complejoY_inv(i,2) filters.complejoY_inv(i,3) filters.complejoY_inv(i,4)]};
-%       Filters_complex{7}{i}={[filters.complejoXY_inv(i,1)], [filters.complejoXY_inv(i,2)], [filters.complejoXY_inv(i,3)], [filters.complejoXY_inv(i,4)], [filters.complejoXY_inv(i,1) filters.complejoXY_inv(i,2)],  [filters.complejoXY_inv(i,3) filters.complejoXY_inv(i,4)],[filters.complejoXY_inv(i,1) filters.complejoXY_inv(i,3)],[filters.complejoXY_inv(i,2) filters.complejoXY_inv(i,4)], [filters.complejoXY_inv(i,2) filters.complejoXY_inv(i,3)], [filters.complejoXY_inv(i,1) filters.complejoXY_inv(i,2) filters.complejoXY_inv(i,3)],[filters.complejoXY_inv(i,2) filters.complejoXY_inv(i,3) filters.complejoXY_inv(i,4)]};
-%       Filters_complex{8}{i}={[filters.complejoYX_inv(i,1)], [filters.complejoYX_inv(i,2)], [filters.complejoYX_inv(i,3)], [filters.complejoYX_inv(i,4)], [filters.complejoYX_inv(i,1) filters.complejoYX_inv(i,2)],  [filters.complejoYX_inv(i,3) filters.complejoYX_inv(i,4)],[filters.complejoYX_inv(i,1) filters.complejoYX_inv(i,3)],[filters.complejoYX_inv(i,2) filters.complejoYX_inv(i,4)],[filters.complejoYX_inv(i,2) filters.complejoYX_inv(i,3)], [filters.complejoYX_inv(i,1) filters.complejoYX_inv(i,2) filters.complejoYX_inv(i,3)],[filters.complejoYX_inv(i,2) filters.complejoYX_inv(i,3) filters.complejoYX_inv(i,4)]};
-% 
-% 
-%     end
-
-
-
 
 %concantenando todods los cuadrados construidos
 %
@@ -146,10 +114,9 @@ delaunay_test=[];
            
            [index_cuad, complejo]= complex_wtsquare(A);
            complex_eigth{j}=complejo;
-          %   complex_eigth{j}=A;
             Index_cuad{j}=index_cuad;
             complex_eigth;
-           % Filters_complex_eigth{j}=A;
+
         end
      
         Name_complejos = [pathname1,sprintf('Complejos_Actor_%d', h)];
@@ -158,12 +125,11 @@ delaunay_test=[];
         save([ Name_complejos num2str(m) '.mat'],'complex_eigth')
         save([ Name_index num2str(m) '.mat'],'Index_cuad')
         
-        %  Complex_eight_full{h}{m}=complex_eigth;
-         %  Index_eight_full{h}{m}=  Index_cuad;
+
            
        clearvars -except  delaunay  h m  Name_complejos Name_index pathname pathname_index pathname1 pathname2
            
-     %  clearvars -except  delaunay  Complex_eight_full Index_eight_full h m
+
  
        
     end
