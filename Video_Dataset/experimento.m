@@ -1,5 +1,5 @@
 function [test, training, training8, test8] = experimento(n)
-
+#experiment that construct the one matrix with the information of each persisten value from the eight filtration of the complex calculated.
 matrix = [];
 for j=1:24
     for i=1:60
