@@ -47,7 +47,7 @@ def emotions(file1):
     #get the optimal parameter delay
     t, d= get_parameters(y_k)
 
-    # embedded in two dimensions
+    # embedded in given dimensions
     embedder = takensEmbedding(y_k, t, d)
 
     return embedder, dur_sec, tempo
