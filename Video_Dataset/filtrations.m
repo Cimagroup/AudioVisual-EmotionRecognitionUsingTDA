@@ -11,7 +11,7 @@ function filters = filtrations(complex)
     
     maxP = max(max(abs(complex.pts))) + 10000;
     
-   %**********sort triangles*******************    
+   %**********sort 2-cells*******************    
  
     [X,indX] = sortrows(pts_central); %ordenanado los puntso por el los elementos de la primer columna
     
