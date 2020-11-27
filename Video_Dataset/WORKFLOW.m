@@ -3,13 +3,12 @@ matrix=[];
 diagram=[];
 ent=[];
 
-%suma_total=zeros(24,60);
 count=1;
 pathname= 'C:\EmotionalRecognition\Partes\test\barcode\Barcode';
 pathname_entropy= 'C:\EmotionalRecognition\Partes\test\entropy\Entropy';
-for j=8:8 
+for j=1:24 #the amount of people video from Dataset
 
-    for i=23:60
+    for i=1:60 #amount of video for each person from the dataset
        mkdir([pathname,sprintf('_%d',j)]);
        pathname1=fullfile([pathname,sprintf('_%d',j)],'\');
        mkdir([pathname_entropy,sprintf('_%d',j)]);
@@ -21,7 +20,7 @@ for j=8:8
        
        for k=1:8
            matrix = complex2matrix(Complejo{k});
-      
+      #application the incremental algorithm to get the persistence diagram 
            [cc]= Persistence_new(matrix);
            cc=sortrows(cc,1);
            all=1:length(matrix);
@@ -36,11 +35,11 @@ for j=8:8
            end
               dd(dd(:, 2)== 0, :)= [];
               dd(dd(:, 1)== dd(:, 2), :)= [];
+            #function to get the persistent entropy associated to each diagram, 
             [entropy] = per_entropy(dd);
             diagram{k}=dd;
             ent{k}=entropy;
            
-            %suma_total(j,i)= sum([ent{:}]);
             diagram;
             ent;
        end
