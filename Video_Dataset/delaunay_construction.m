@@ -1,7 +1,7 @@
 %% Construction of the Delaunay trinagulation in every video associated with th 24 persons
 function Delaunay_base= delaunay_construction(pathdata) 
 
-%pathdata='/EmotionalRecognition/Database/Speech/Actor_%d/Actor%d_%d.csv';
+%pathdata='/EmotionalRecognition/Database/Speech/Actor_%d/Actor%d_%d.csv'
 Delaunay_person= [];
 
 for j=1:24
