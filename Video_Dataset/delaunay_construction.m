@@ -13,12 +13,7 @@ for j=1:24
        csv(:,2:297)=[];
        
        csv(:,138:416)=[];
-        %list_o_cols_to_delete = [2 3 7 8 13 15 19 20 24 25 29 31 35 36 40 41 45 47 ...
-         %   51 52 56 57 61 63 67 68 72 73 77 79 83 84 88];
-       %csv(list_o_cols_to_delete,:) = [];
-       %obtener los puntos de la boca solamente
-       %csv(:,29:69)=[];
-       %csv(:,56:96)=[];
+  
        
        for k=1:10:size(csv,1)
        Vector_y=(table2array(csv(k,70:137)))';
@@ -28,8 +23,7 @@ for j=1:24
        point_cloud{k}=[Vector_x Vector_y];
        Delaunay_person{i,k}= delaunayTriangulation(point_cloud{k});
        end
-       %Delaunay;
-       %Delaunay_person{i,k}=Delaunay{k};
+ 
     end
        Delaunay_base{j}=Delaunay_person;
 end
