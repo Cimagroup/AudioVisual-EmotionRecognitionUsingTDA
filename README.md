@@ -6,6 +6,8 @@ Audio-Dataset: https://www.kaggle.com/uwrfkaggler/ravdess-emotional-speech-audio
 
 Video-Dataset: https://zenodo.org/record/1188976#.X7yio2hKjIU
 
+The Final Master project PDF document is available [here](https://github.com/Cimagroup/AudioVisual-EmotionRecognitionUsingTDA/blob/master/Thesis_doc.pdf).
+
 Folder Video_Dataset:
 
 Dataset used is available in this url https://zenodo.org/record/1188976#.X7yio2hKjIU
