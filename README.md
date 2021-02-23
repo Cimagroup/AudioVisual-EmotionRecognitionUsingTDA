@@ -8,7 +8,7 @@ Video-Dataset: https://zenodo.org/record/1188976#.X7yio2hKjIU
 
 The Final Master project PDF document is available [here](https://github.com/Cimagroup/AudioVisual-EmotionRecognitionUsingTDA/blob/master/Thesis_doc.pdf).
 
-Folder Video_Dataset:
+## **Folder Video_Dataset:**
 
 Dataset used is available in this url https://zenodo.org/record/1188976#.X7yio2hKjIU
 The algorithm works in this order:
@@ -38,7 +38,7 @@ Load each complex and its index and apply:
 
 6. **feature24_vector.m**: experiment done considering a vector of 24 features for each person. in this experiment we dont get good results.
 
-**Folder Audio Dataset**:
+## **Folder Audio Dataset**:
 
 In this url yo can finde the Audio-Dataset used for this implementation, the formal of the files are in .wav: https://www.kaggle.com/uwrfkaggler/ravdess-emotional-speech-audio
 
