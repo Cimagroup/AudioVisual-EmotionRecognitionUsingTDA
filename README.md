@@ -64,3 +64,8 @@ In this url yo can finde the Audio-Dataset used for this implementation, the for
 4. **machine_learning_second**: To construct a distance matrix of persistence diagrams (Bottleneck distance). Upload the csv prueba5.csv that contains the label of the emotion associated to each rows of the matrix. Create the fake data matrix: just the indices of the timeseries. Import the KNeighborsClassifier from library. For evaluating the algorithm, confusion matrix, precision, recall and f1 score are the most commonly used. Testing different classifier to see what is the best one. GaussianNB;  DecisionTreeClassifier, knn and SVC. 
 
 4.1 **my_dist**: To get the distance bottleneck between diagrams, function that we use to built the matrix of distance, that will be the input of the KNN algorithm.
+
+
+## Classification folde
+
+In this folder, the persistent entropy matrixes and classification experiments using neural networks for video-only and audiovideo datasets are provided.
