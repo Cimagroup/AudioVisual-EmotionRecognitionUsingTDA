@@ -44,7 +44,6 @@ for i in range(10):
     model.fit(x_train,
               y_train,
               epochs=500,
-              validation_data=(x_test,y_test),
               #callbacks=[tensorboard_callback]
               )
     acc_train.append(model.evaluate(x_train,y_train)[1])
