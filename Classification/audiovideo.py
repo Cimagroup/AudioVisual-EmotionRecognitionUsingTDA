@@ -14,7 +14,7 @@ mat_contents = sio.loadmat("matrix_total_audiovideo.mat")
 total_mat=mat_contents["matrix_total"]
 
 labels = total_mat[:,9]-2
-X = total_mat[:,0:8]  
+X = total_mat[:,0:9]  
 x_train, x_test, y_train, y_test = train_test_split(X,labels,test_size=400)
 
 acc_train = []
@@ -23,7 +23,7 @@ acc_test =[]
 for i in range(10):
 
     model = tf.keras.models.Sequential([
-        tf.keras.layers.Flatten(input_shape=(1, 8)),
+        tf.keras.layers.Flatten(input_shape=(1, 9)),
         tf.keras.layers.Dense(512, activation='relu'),
         tf.keras.layers.Dropout(0.2),
         tf.keras.layers.Dense(128, activation='relu'),
